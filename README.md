@@ -1,6 +1,6 @@
 # Task Management Application
 
-A full-stack task management application built with NestJS, React, TypeScript, and PostgreSQL. The application allows users to create, read, update, and delete tasks with a clean and intuitive interface.
+This is a Task Management Application I built to strengthen my skills in full-stack development. It uses React (frontend), NestJS (backend), and PostgreSQL (database). The app allows users to create, update, and track tasks through a responsive UI and secure REST APIs.
 
 ## Features
 
@@ -36,93 +36,16 @@ A full-stack task management application built with NestJS, React, TypeScript, a
 - Docker and Docker Compose (optional, for containerized deployment)
 
 ## Running the Application
+The app can be run locally or with Docker.  
+For simplicity, I’ve included setup instructions in the backend/frontend README files.  
+- Frontend: `cd frontend && npm install && npm run dev`  
+- Backend: `cd backend && npm install && npm run start:dev`
 
-### Option 1: Using Docker (Recommended)
 
-1. Clone the repository:
+## Deployment / Setup
+This project is containerized using Docker and can also be run locally with Node.js and PostgreSQL.  
+For detailed setup steps, please check the backend and frontend directories.
 
-   ```bash
-   git clone <repository-url>
-   cd task-management-app
-   ```
-
-2. Create a `.env` file in the `backend` directory with the following variables:
-
-   ```env
-    DB_HOST=localhost
-    DB_PORT=5432
-    DB_USERNAME=postgres
-    DB_PASSWORD=postgres
-    DB_NAME=tasks_db
-    PORT=3000
-   ```
-
-3. Build and run the containers:
-
-   ```bash
-   docker-compose up --build
-   ```
-
-4. Access the application:
-   - Frontend: <http://localhost:80>
-   - Backend API: <http://localhost:3000>
-
-### Option 2: Running Locally
-
-#### Backend Setup
-
-1. Navigate to the backend directory:
-
-   ```bash
-   cd backend
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Create a PostgreSQL database named `taskdb`
-
-4. Copy the `.env.example` file to `.env` and update the variables:
-
-   ```env
-    DB_HOST=localhost
-    DB_PORT=5432
-    DB_USERNAME=postgres
-    DB_PASSWORD=postgres
-    DB_NAME=tasks_db
-    PORT=3000
-   ```
-
-5. Start the backend server:
-
-   ```bash
-   npm run start:dev
-   ```
-
-#### Frontend Setup
-
-1. Open a new terminal and navigate to the frontend directory:
-
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-4. Access the application at <http://localhost:5173>
 
 ## API Endpoints
 
@@ -133,32 +56,12 @@ A full-stack task management application built with NestJS, React, TypeScript, a
 - `DELETE /tasks/:id` - Delete a task
 - `GET /health` - Check the health of the application
 
-## Development
+# My Contribution
 
-### Frontend Development
+Implemented CRUD operations and REST APIs using NestJS +    PostgreSQL
 
-The frontend is built with Vite and uses TypeScript. Key files:
+Integrated Redux Toolkit for state management in React
 
-- `src/components/` - React components
-- `src/assets/` - Assets
-- `src/store/` - Redux store and slices
-- `src/services/` - API service layer
-- `src/index.css` - Global styles
+Configured Docker for full-stack containerized deployment
 
-### Backend Development
-
-The backend uses NestJS with TypeScript. Key files:
-
-- `src/tasks/entities/` - Task TypeORM entities
-- `src/tasks/dto/` - Task Data Transfer Objects
-- `src/migrations/` - Database migrations
-- `src/tasks/tasks.controller.ts` - Task Request handlers
-- `src/tasks/tasks.service.ts` - Task Service layer
-- `src/tasks/tasks.module.ts` - Task Module configuration
-- `src/app.controller.ts` - Health check endpoint
-- `src/app.module.ts` - Main module
-- `src/main.ts` - Entry point
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Documented API endpoints and structured code for clarity
