@@ -65,3 +65,14 @@ Integrated Redux Toolkit for state management in React
 Configured Docker for full-stack containerized deployment
 
 Documented API endpoints and structured code for clarity
+
+
+# Future Improvements
+
+Add task priority and due dates
+
+Implement role-based access (Admin/User)
+
+Integrate GraphQL and WebSockets for real-time updates
+
+Add unit & integration tests with Jest
